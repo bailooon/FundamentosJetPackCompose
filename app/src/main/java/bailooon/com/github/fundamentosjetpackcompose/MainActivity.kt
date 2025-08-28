@@ -20,7 +20,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             FundamentosJetPackComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text(text = "Hello World", modifier = Modifier.padding(innerPadding))
+                    Text(
+                        text = getString(R.string.hello_world),
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }
