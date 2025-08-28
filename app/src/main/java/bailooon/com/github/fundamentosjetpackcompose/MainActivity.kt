@@ -31,9 +31,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TextoCustomizado(texto: String, modifier: Modifier) {
+fun TextoCustomizado(texto: String, modifier: Modifier = Modifier) {
     Text(
         text = texto,
         modifier = modifier.fillMaxSize()
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Preview() {
+    FundamentosJetPackComposeTheme {
+        TextoCustomizado("Primeira função composable")
+    }
 }
